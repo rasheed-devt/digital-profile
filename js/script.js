@@ -57,3 +57,33 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
+
+const restrictedElements = [
+    "facebookIcon",
+    "twitterIcon",
+    "instagramIcon",
+    "aboutme readmore",
+    "service1 readmore",
+    "service2 readmore",
+    "service3 readmore",
+    "link1",
+    "link2",
+    "link3",
+    "link4",
+    "link5",
+    "link6"
+  ];
+  
+  restrictedElements.forEach(elementId => {
+    document.getElementById(elementId).addEventListener("click", function() {
+      alert("Restricted: Not Allowed");
+    });
+  });
+
+  function submitForm(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Display custom message
+    alert("At this time, the server is undergoing maintenance. Please send an email to networktechies9@gmail.com.");
+
+  }
